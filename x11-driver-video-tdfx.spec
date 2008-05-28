@@ -17,7 +17,7 @@ BuildRequires: GL-devel
 Conflicts: xorg-x11-server < 7.0
 
 %description
-The X.org driver for Voodoo Cards.
+x11-driver-video-tdfx is the X.org driver for Voodoo Cards.
 
 %prep
 %setup -q -n xf86-video-tdfx-%{version}
