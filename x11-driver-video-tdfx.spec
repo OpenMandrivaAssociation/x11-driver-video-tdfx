@@ -1,3 +1,5 @@
+%define _disable_ld_no_undefined 1
+
 Summary:	X.org driver for Voodoo Cards
 Name:		x11-driver-video-tdfx
 Version:	1.4.5
