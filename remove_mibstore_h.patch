@@ -1,6 +1,6 @@
---- xf86-video-tdfx-1.4.5/src/tdfx_driver.c~	2012-07-17 05:21:16.000000000 +0000
-+++ xf86-video-tdfx-1.4.5/src/tdfx_driver.c	2013-03-17 05:53:33.835868738 +0000
-@@ -62,10 +62,6 @@
+--- xf86-video-tdfx-1.4.5/src/tdfx_driver.c.0000~	2012-07-17 07:21:16.000000000 +0200
++++ xf86-video-tdfx-1.4.5/src/tdfx_driver.c	2013-04-06 02:58:47.183049539 +0200
+@@ -62,10 +62,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN
  
  #include "compiler.h"
  
@@ -11,3 +11,11 @@
  /* All drivers using the vgahw module need this */
  /* This driver needs to be modified to not use vgaHW for multihead operation */
  #include "vgaHW.h"
+@@ -2373,7 +2369,6 @@ TDFXScreenInit(SCREEN_INIT_ARGS_DECL) {
+     }
+   }
+ 
+-  miInitializeBackingStore(pScreen);
+   xf86SetBackingStore(pScreen);
+   xf86SetSilkenMouse(pScreen);
+ 
