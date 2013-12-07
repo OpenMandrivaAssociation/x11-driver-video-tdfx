@@ -3,7 +3,7 @@
 Summary:	X.org driver for Voodoo Cards
 Name:		x11-driver-video-tdfx
 Version:	1.4.5
-Release:	4
+Release:	5
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
