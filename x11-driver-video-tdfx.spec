@@ -9,7 +9,8 @@ License:	MIT
 Url:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-tdfx-%{version}.tar.bz2
 Patch0:		remove_mibstore_h.patch
- 
+Patch1:		U_Rename-XSERVER_PCIACCESS-to-XSERVER_LIBPCIACCESS.patch
+Patch2:		U_dri-Stop-uselessly-initializing-the-ValidateTree-hoo.patch 
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(libdrm)
 BuildRequires:	pkgconfig(xorg-macros)
@@ -25,7 +26,7 @@ x11-driver-video-tdfx is the X.org driver for Voodoo Cards.
 %apply_patches
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install

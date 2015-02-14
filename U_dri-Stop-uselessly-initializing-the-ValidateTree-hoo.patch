@@ -1,0 +1,26 @@
+From 2f71b05e29ae13a0fb6fbc74f4f76c78b6ddb0d7 Mon Sep 17 00:00:00 2001
+From: Adam Jackson <ajax@redhat.com>
+Date: Tue, 29 Jul 2014 09:15:49 -0400
+Subject: [PATCH] dri: Stop (uselessly) initializing the ValidateTree hooks
+
+Signed-off-by: Adam Jackson <ajax@redhat.com>
+---
+ src/tdfx_dri.c | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/src/tdfx_dri.c b/src/tdfx_dri.c
+index 87ec0e8..981867a 100644
+--- a/src/tdfx_dri.c
++++ b/src/tdfx_dri.c
+@@ -361,8 +361,6 @@ Bool TDFXDRIScreenInit(ScreenPtr pScreen)
+   pDRIInfo->frameBufferStride = pTDFX->stride;
+   pDRIInfo->ddxDrawableTableEntry = TDFX_MAX_DRAWABLES;
+ 
+-  pDRIInfo->wrap.ValidateTree = 0;
+-  pDRIInfo->wrap.PostValidateTree = 0;
+   pTDFX->coreBlockHandler = pDRIInfo->wrap.BlockHandler;
+   pDRIInfo->wrap.BlockHandler = TDFXDoBlockHandler;
+   pTDFX->coreWakeupHandler = pDRIInfo->wrap.WakeupHandler;
+-- 
+1.8.4.5
+

@@ -1,0 +1,30 @@
+From 646137de571a9df950d3a3edb454803268fd5f98 Mon Sep 17 00:00:00 2001
+From: Guillem Jover <guillem@hadrons.org>
+Date: Fri, 27 Sep 2013 19:06:31 +0200
+Subject: [PATCH] Rename XSERVER_PCIACCESS to XSERVER_LIBPCIACCESS
+
+Using the wrong macro name means that the code uses an obsolete typedef
+that issues warnings.
+
+Signed-off-by: Guillem Jover <guillem@hadrons.org>
+Reviewed-by: Adam Jackson <ajax@redhat.com>
+---
+ src/tdfx.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/tdfx.h b/src/tdfx.h
+index 7e3be81..d8a72db 100644
+--- a/src/tdfx.h
++++ b/src/tdfx.h
+@@ -226,7 +226,7 @@ typedef struct _TDFXRec {
+   unsigned long MMIOAddr[MAXCHIPS];
+   EntityInfoPtr pEnt;
+   int numChips;
+-#ifndef XSERVER_PCIACCESS
++#ifndef XSERVER_LIBPCIACCESS
+   PCITAG PciTag[MAXCHIPS];
+ #endif
+   Bool Primary;
+-- 
+1.8.4.5
+
