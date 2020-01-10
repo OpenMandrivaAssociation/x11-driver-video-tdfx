@@ -20,7 +20,7 @@ x11-driver-video-tdfx is the X.org driver for Voodoo Cards.
 
 %prep
 %setup -qn xf86-video-tdfx-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 %configure
